@@ -32,7 +32,8 @@ form {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 label {
@@ -87,6 +88,33 @@ button:hover {
 	text-transform: uppercase;
 	line-height: 1.75rem;
 	font-weight: 400;
+}
+
+.clear {
+	display: block;
+	margin: 1rem auto;
+}
+
+.search-terms {
+	margin-top: 50px;
+	text-align: center;
+	font-size: 1.25rem;
+	color: #000000;
+	width: 800px;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+	border-radius: 10px;
+	background-color: #ffffff62;
+}
+
+.search-terms p {
+	line-height: 1.75rem;
+	text-transform: capitalize;
+	color: #0a470c;
+}
+
+.hidden {
+	display: none;
 }
 
 @media only screen and (max-width: 375px) {

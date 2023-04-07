@@ -1,13 +1,23 @@
 const submit = document.querySelector('#submit-btn');
 const input = document.querySelector('input');
 const results = document.querySelector('.results');
+const searchHome = document.querySelector('.search-terms');
+const refresh = document.querySelector('.clear');
 
 const clearField = function () {
 	input.value = '';
 };
 
+const showSearchTerms = function () {
+	searchHome.classList.remove('hidden');
+	results.classList.add('hidden');
+};
+
+// event handlers
 submit.addEventListener('click', function (e) {
 	e.preventDefault();
+	searchHome.classList.add('hidden');
+	results.classList.remove('hidden');
 	console.log(input.value);
 
 	const foodItem = input.value;
@@ -25,6 +35,7 @@ submit.addEventListener('click', function (e) {
 		.then((response) => response.json())
 		.then((data) => {
 			let foodFound = false;
+
 			for (let i = 0; i < data.length; i++) {
 				const food = data[i].food;
 				const storage = data[i].storage;
@@ -58,3 +69,5 @@ submit.addEventListener('click', function (e) {
 		});
 	clearField();
 });
+
+refresh.addEventListener('click', showSearchTerms);
