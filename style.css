@@ -47,6 +47,7 @@ input {
 	border: none;
 	margin: 10px;
 	background-color: #e7e5e5;
+	outline: none;
 }
 
 button {
